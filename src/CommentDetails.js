@@ -1,19 +1,19 @@
 import React from "react";
 
-const CommentDetails = () => {
+const CommentDetails = (props) => {
   return (
     <div className="comment">
       <a href="/" className="avatar">
-        <img alt="avatar" />
+        <img alt="avatar" src={props.image} />
       </a>
       <div className="content">
         <a href="/" className="author">
-          Malathi
+          {props.user}
         </a>
         <div className="metadata">
-          <span className="date">Today at 5:00pm</span>
+          <span className="date">{props.timeAgo}</span>
         </div>
-        <div className="text">Nice post</div>
+        <div className="text">{props.content}</div>
       </div>
     </div>
   );
